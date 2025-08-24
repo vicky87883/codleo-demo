@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Codleo - IT Solutions Website
 
-## Getting Started
+A modern, responsive website for Codleo IT Solutions built with Next.js 14, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Responsive Design**: Mobile-first approach with beautiful UI
+- **Modern Stack**: Next.js 14, TypeScript, Tailwind CSS
+- **Interactive Components**: Hero slider, features slider, projects showcase
+- **Professional Design**: Clean, modern interface with primary color #683bf2
+
+## 📁 Project Structure
+
+```
+frontend/
+├── src/
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── page.tsx           # Home page
+│   │   ├── about/page.tsx     # About page
+│   │   ├── blog/page.tsx      # Blog page
+│   │   ├── contact/page.tsx   # Contact page
+│   │   ├── services/page.tsx  # Services page
+│   │   └── layout.tsx         # Root layout
+│   ├── components/            # Reusable components
+│   │   ├── layout/           # Layout components (Header, TopNavbar)
+│   │   ├── HeroSlider.tsx    # Hero section slider
+│   │   ├── FeaturesSlider.tsx # Features showcase
+│   │   └── ProjectsSlider.tsx # Projects showcase
+│   ├── constants/            # App constants and data
+│   │   └── index.ts         # Site config, navigation, etc.
+│   ├── lib/                 # Utility libraries
+│   │   └── utils.ts         # Helper functions
+│   └── types/               # TypeScript type definitions
+│       └── index.ts         # Type definitions
+├── public/                  # Static assets
+└── package.json            # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Installation & Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Run development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. **Open in browser:**
+   ```
+   http://localhost:3000
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Design System
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Primary Color**: #683bf2 (Purple)
+- **Secondary Color**: #5a2fd8 (Dark Purple)
+- **Background**: White, Gray-50, #EDECFD (Light Purple)
+- **Typography**: Inter font family
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 Pages
 
-## Deploy on Vercel
+1. **Home Page** (`/`) - Main landing page with hero, features, about, services, team, and projects
+2. **About Page** (`/about`) - Company information and team details
+3. **Services Page** (`/services`) - IT services offered
+4. **Contact Page** (`/contact`) - Contact information and form
+5. **Blog Page** (`/blog`) - Blog posts and articles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Key Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Header**: Navigation with dropdown menus and mobile responsive
+- **TopNavbar**: Mini navbar with contact info and social links
+- **HeroSlider**: Animated hero section with content slider
+- **FeaturesSlider**: Continuous moving features showcase
+- **ProjectsSlider**: Projects showcase with glass morphism effects
+
+## 📦 Dependencies
+
+- **Next.js 14**: React framework
+- **TypeScript**: Type safety
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Icon library
+- **ESLint**: Code quality
+
+## 🚀 Build & Deploy
+
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## 📄 License
+
+This project is created for demonstration purposes.

@@ -1,103 +1,200 @@
-import Image from "next/image";
+import Link from 'next/link';
+import HeroSlider from '@/components/HeroSlider';
+import FeaturesSlider from '@/components/FeaturesSlider';
+import ProjectsSlider from '@/components/ProjectsSlider';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen">
+      {/* Hero Slider */}
+      <HeroSlider />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Gap Section */}
+      <section className="py-16 bg-white">
+        <div className="w-full px-4">
+          <div className="text-center">
+            {/* Empty gap section - removed numbered indicators */}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20" style={{ backgroundColor: '#EDECFD' }}>
+        <div className="w-full px-4">
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h3 className="text-[#683bf2] font-semibold mb-4">Our Unique Features</h3>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Discover Our Unique Features
+            </h2>
+          </div>
+          
+          <FeaturesSlider />
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-[#683bf2] font-semibold mb-4">About Our Company</h3>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                We provide perfect IT solutions & technology for any startups Agency's.
+              </h2>
+              <p className="text-gray-600 mb-8 text-lg">
+                Deliver beautiful emails that get opened and clicked every time. Personalized content to every subscriber. Fully customizable templates. Build relationships that lead to conversions.
+              </p>
+              
+              <div className="bg-gray-50 p-6 rounded-lg mb-8">
+                <div className="flex items-center mb-4">
+                  <div className="text-3xl mr-4">⭐</div>
+                  <h4 className="text-xl font-bold">Best Technical Solution</h4>
+                </div>
+                <p className="text-gray-600">
+                  Nanotechnology immersion along the information high will close the loop on focusing solely
+                </p>
+              </div>
+              
+              <Link 
+                href="/services" 
+                className="bg-[#683bf2] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#5a2fd8] transition-colors inline-block"
+              >
+                Get Our Services
+              </Link>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="https://themexriver.com/wp/tekz/wp-content/uploads/2025/04/ab1.webp" 
+                alt="Codleo Company"
+                className="w-full h-auto rounded-lg shadow-lg object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-[#683bf2] font-semibold mb-4">Our Services</h3>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Our Unique Services
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Our team is dedicated to delivering exceptional IT solutions tailored to meet the unique needs of each client.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <span className="bg-[#683bf2]/10 text-[#683bf2] px-3 py-1 rounded-full text-sm font-semibold mr-4">01</span>
+                <div className="text-3xl">🔒</div>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Cybersecurity Services</h3>
+              <p className="text-gray-600 mb-4">
+                Our job doesn't stop. We provide continuous monitoring, maintenance, and optimization to ensure seamless operation and peak performance.
+              </p>
+              <Link href="/services" className="text-[#683bf2] hover:text-[#5a2fd8] font-semibold">
+                Read More
+              </Link>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <span className="bg-[#683bf2]/10 text-[#683bf2] px-3 py-1 rounded-full text-sm font-semibold mr-4">02</span>
+                <div className="text-3xl">📱</div>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Mobile App Development</h3>
+              <p className="text-gray-600 mb-4">
+                Our job doesn't stop. We provide continuous monitoring, maintenance, and optimization to ensure seamless operation and peak performance.
+              </p>
+              <Link href="/services" className="text-[#683bf2] hover:text-[#5a2fd8] font-semibold">
+                Read More
+              </Link>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <span className="bg-[#683bf2]/10 text-[#683bf2] px-3 py-1 rounded-full text-sm font-semibold mr-4">03</span>
+                <div className="text-3xl">⚙️</div>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Managed IT Services</h3>
+              <p className="text-gray-600 mb-4">
+                Our job doesn't stop. We provide continuous monitoring, maintenance, and optimization to ensure seamless operation and peak performance.
+              </p>
+              <Link href="/services" className="text-[#683bf2] hover:text-[#5a2fd8] font-semibold">
+                Read More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-[#683bf2] font-semibold mb-4">Our Team</h3>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Skilled Expert Team
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Our team is dedicated to delivering exceptional IT solutions tailored to meet the unique needs of each client.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-gray-200 w-48 h-48 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <span className="text-gray-500">Photo</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">James Anderson</h3>
+              <p className="text-[#683bf2]">IT Director</p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-gray-200 w-48 h-48 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <span className="text-gray-500">Photo</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Catherine Brooks</h3>
+              <p className="text-[#683bf2]">Cybersecurity Analyst</p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-gray-200 w-48 h-48 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <span className="text-gray-500">Photo</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Thomas Reynolds</h3>
+              <p className="text-[#683bf2]">Software Developer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-[#683bf2] text-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Book A Consultancy
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Our mission is to look after the financial best interests with automation
+          </p>
+          <Link 
+            href="/contact" 
+            className="bg-white text-[#683bf2] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+          >
+            Book a Service
+          </Link>
+        </div>
+      </section>
+
+      {/* Projects Slider Section */}
+      <ProjectsSlider />
     </div>
   );
 }
